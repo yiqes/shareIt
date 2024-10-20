@@ -1,11 +1,8 @@
 package ru.practicum.item;
 
 import org.springframework.stereotype.Service;
-import ru.practicum.errors.NotFoundException;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ItemServiceImpl implements ItemService {
@@ -42,16 +39,3 @@ public class ItemServiceImpl implements ItemService {
         return itemRepository.findAll();
     }
 }
-    /*@Override
-    public List<Item> searchItems(String text) {
-        if (text.isEmpty()) {
-            return Collections.emptyList();
-        }
-        return itemRepository.findAll().stream()
-                .filter(item -> item.getAvailable() &&
-                        (item.getName().toLowerCase().contains(text.toLowerCase()) ||
-                                item.getDescription().toLowerCase().contains(text.toLowerCase())))
-                .map(ItemMapper::mapToItemDto)
-                .collect(Collectors.toList());
-    }
-}*/
