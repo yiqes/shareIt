@@ -7,7 +7,4 @@ public interface ItemService {
     Item updateItem(Long itemId, Item item);
     Item getItem(Long itemId);
     List<Item> getAllItems();
-/*
-    List<Item> searchItems(String text);
-*/
 }

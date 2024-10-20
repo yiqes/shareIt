@@ -121,15 +121,6 @@ public class ItemController {
         if (text == null || text.isEmpty()) {
             return new ResponseEntity<>(Collections.emptyList(), HttpStatus.OK);
         }
-        /*List<ItemDto> result = new ArrayList<>();
-        for (Item item : items) {
-            // Проверяем, что item доступен и не равен null
-            if ((item.getName() != null && item.getName().contains(text) ||
-                    item.getDescription() != null && item.getDescription().contains(text)) &&
-                    Boolean.TRUE.equals(item.getAvailable())) {
-                result.add(ItemMapper.mapToItemDto(item));
-            }
-        }*/
         List<ItemDto> foundItems = items.stream()
                 .filter(item -> (item.getAvailable() != null && item.getAvailable()) && // Проверка доступности
                         (item.getName() != null && item.getName().toLowerCase().contains(text.toLowerCase()) ||
