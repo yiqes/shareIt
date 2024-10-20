@@ -19,4 +19,24 @@ class UserServiceImpl implements UserService {
     public User saveUser(User user) {
         return repository.save(user);
     }
+
+    @Override
+    public User updateUserById(User user, Long id) {
+        return repository.updateUserById(user, id);
+    }
+
+    @Override
+    public User findById(Long id) {
+        return repository.findById(id);
+    }
+    /*@Override
+    public User updateUser(User user) {
+        return repository.updateUser(user);
+    }*/
+
+    @Override
+    public void deleteUser(Long id) {
+        repository.deleteUser(id);
+    }
+
 }
