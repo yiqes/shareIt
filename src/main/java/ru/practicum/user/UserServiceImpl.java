@@ -29,10 +29,7 @@ class UserServiceImpl implements UserService {
     public User findById(Long id) {
         return repository.findById(id);
     }
-    /*@Override
-    public User updateUser(User user) {
-        return repository.updateUser(user);
-    }*/
+
 
     @Override
     public void deleteUser(Long id) {
