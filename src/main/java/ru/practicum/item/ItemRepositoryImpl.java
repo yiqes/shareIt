@@ -19,10 +19,6 @@ public class ItemRepositoryImpl implements ItemRepository {
 
     @Override
     public Item findById(Long id) {
-        /*return items.stream()
-                .filter(item -> item.getId().equals(id))
-                .findFirst()
-                .orElse(null);*/
         Optional<Item> existingItem = items.stream()
                 .filter(item -> item.getId().equals(id))
                 .findFirst();
@@ -35,18 +31,6 @@ public class ItemRepositoryImpl implements ItemRepository {
 
     @Override
     public Item save(Item item) {
-        /*if (item.getOwnerId() == null) {
-            throw new NotFoundException("Владелец предмета не найден");
-        }
-        if (item.getAvailable() == null) {
-            throw new ValidationException("Статус не известен");
-        }
-        if (item.getName() == null || item.getName().isBlank()) {
-            throw new ValidationException("Имя пустое");
-        }
-        if (item.getDescription() == null || item.getDescription().isBlank()) {
-            throw new ValidationException("Описание не найдено");
-        }*/
         if (item.getAvailable() == null) {
             throw new ValidationException("Статус не известен");
         }
@@ -60,12 +44,6 @@ public class ItemRepositoryImpl implements ItemRepository {
         item.setOwnerId(item.getOwnerId());
         items.add(item);
         return item;
-        /*isUserValid(user);
-        user.setId(getId());
-        user.setName(user.getName());
-        user.setEmail(user.getEmail());
-        users.add(user);
-        return user;*/
     }
     @Override
     public Item updateItem(Item item, Long id) {
