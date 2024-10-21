@@ -19,7 +19,7 @@ jobs:
 
       - name: Build and run server
         run: |
-          cd C:\Users\alkom\PetProject\later # Укажите правильный путь к вашему проекту
+          cd later # Укажите правильный путь к вашему проекту
           ./mvnw spring-boot:run & # Запускаем сервер в фоновом режиме
           sleep 30 # Ждем, пока сервер запустится
 
