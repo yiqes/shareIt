@@ -15,4 +15,4 @@ jobs:
         run: npm install -g newman
 
       - name: Run Postman Tests
-        run: newman run postman_tests/Sprint 14 ShareIt (add-controllers).postman_collection.json
+        run: newman run postman_tests/Sprint_14_ShareItadd-controllers.postman_collection.json
