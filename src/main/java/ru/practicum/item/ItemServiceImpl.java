@@ -1,11 +1,8 @@
 package ru.practicum.item;
 
 import org.springframework.stereotype.Service;
-import ru.practicum.errors.NotFoundException;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ItemServiceImpl implements ItemService {
