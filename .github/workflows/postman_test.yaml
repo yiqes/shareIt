@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11' # Укажите вашу версию Java
+          distribution: 'adopt'
 
       - name: Build and run server
         run: |
